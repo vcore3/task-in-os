@@ -1,14 +1,14 @@
 #pragma once
 struct PCB{
     /* data */
-    int id;//进程名    **********************************事先确认
-    int pri;//优先级   **********************************事先确认
-    int all_time;//完成任务所需要的时间，时间片；********计算
-    int bust_time;//服务时间，时间片；*******************事先确认
-    int arrive_time;//进程到达时间，时刻；***************事先确认
-    int start_time;//开始服务的时间；***********************计算
-    int waite_time;//从进队到执行代码的这段等待时间*************计算
-    int complete_time;//完成时间，时刻；*********************计算
+    int id;//name of process    **********************************certain in input
+    int pri;//priority   **********************************certain in input
+    int all_time;//sum of time , a slice time；********calculate
+    int bust_time;//runtime，a slice time；*******************certain in input
+    int arrive_time;//arrive of process，slice time；***************certain in input
+    int start_time;//starting excute；***********************calculate
+    int waite_time;//during come into queue to start to excute*************calculate
+    int complete_time;//completetime，time point；*********************calculate
     int state;//进程状态
     struct PCB* next;
     /*  all_time = complete_time - arrive_time;
