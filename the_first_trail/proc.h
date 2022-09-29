@@ -9,7 +9,7 @@ struct PCB{
     int start_time;//starting excute；***********************calculate
     int waite_time;//during come into queue to start to excute*************calculate
     int complete_time;//completetime，time point；*********************calculate
-    int state;//进程状态
+    int state;//process of state
     struct PCB* next;
     /*  all_time = complete_time - arrive_time;
         waite_time = all_time - bust_time;
