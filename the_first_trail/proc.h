@@ -10,6 +10,7 @@ struct PCB{
     int waite_time;//during come into queue to start to excute*************calculate
     int complete_time;//completetime，time point；*********************calculate
     int state;//process of state
+    int count_time; //count of slice time;
     struct PCB* next;
     /*  all_time = complete_time - arrive_time;
         waite_time = all_time - bust_time;
