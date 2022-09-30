@@ -18,7 +18,11 @@ void FCFS(){
         }
         head->complete_time = head->start_time + head->bust_time;
         head->waite_time = head->start_time - head->arrive_time;
-        printf("   %d       %d       %d       %d       %d\n",head->id,head->arrive_time,head->waite_time,head->bust_time,head->complete_time);
+        head->id > 9 ? printf("  %d   ",head->id) : printf("  %d    ",head->id);
+        head->arrive_time > 9 ? printf("   %d    ",head->arrive_time) : printf("   %d     ",head->arrive_time);
+        head->waite_time > 9 ? printf("   %d    ",head->waite_time) : printf("   %d     ",head->waite_time);
+        head->bust_time > 9 ? printf("   %d    ",head->bust_time) : printf("   %d     ",head->bust_time);
+        printf("   %d\n",head->complete_time);
         if(front != NULL)free(front);
         front = head;
         head = head->next;
