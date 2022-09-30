@@ -18,9 +18,15 @@ void rr(){
             head->count_time += 1;
             front_leave_time = head->complete_time;
             front = head;
-            head = head->next;
+           // head = head->next;
             //printf("%p\n",head);
-            printf("   %d       %d        %d       %d        %d   \n",front->id,front->arrive_time,front->bust_time,front->count_time,front->complete_time);
+           // printf("   %d       %d        %d       %d        %d   \n",front->id,front->arrive_time,front->bust_time,front->count_time,front->complete_time);
+            head->id > 9 ? printf("  %d   ",head->id) : printf("  %d    ",head->id);
+            head->arrive_time > 9 ? printf("   %d    ",head->arrive_time) : printf("   %d     ",head->arrive_time);
+            head->bust_time > 9 ? printf("   %d    ",head->bust_time) : printf("   %d     ",head->bust_time);
+            head->count_time > 9 ? printf("    %d     ",head->count_time) : printf("   %d      ",head->count_time);
+            printf("   %d\n",head->complete_time);
+            head = head->next;
             free(front);
         }
         else{
