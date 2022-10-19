@@ -26,6 +26,6 @@ void fifo(){
     }
     int all = 0;
     for(int i = 0; i < 32; i++)all += mis[i];
-    rate[cap] = (1.0 - 1.0 * all / 320) * 100.0;
+    rate_fifo[cap] = (1.0 - 1.0 * all / 320) * 100.0;
 }
 

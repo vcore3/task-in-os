@@ -7,4 +7,4 @@ int que[35];//页面队列
 int head;//要替换的头部
 int mx;//队列当前最大值
 int cap;//内存容量 
-double rate[35];
+double rate_fifo[35], rate_lur[35];
