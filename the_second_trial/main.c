@@ -13,16 +13,10 @@ int main(int argc, char* argv[]){
     srand((unsigned)(time(NULL)));
     creat(addr);
     cap = 4;
-    for(int i = 0; i< 2; ++i){
-        if(i == 0){
-            while(cap < 33){
-                fifo();
-                cap++;
-            }
-        }
-        else{
-            //lur;
-        }
+    while(cap < 33){
+        fifo();
+        lru();
+        cap++;
     }
     print();
     return 0;
