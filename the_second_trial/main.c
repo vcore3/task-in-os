@@ -12,6 +12,9 @@
 int main(int argc, char* argv[]){
     srand((unsigned)(time(NULL)));
     creat(addr);
+    //for(int i = 0;i < 320; ++i)addr[i] = i;
+    //for(int i = 0; i < 320; ++i)printf("%d ",addr[i]);
+    //puts(" ");
     cap = 4;
     while(cap < 33){
         fifo();
@@ -19,6 +22,7 @@ int main(int argc, char* argv[]){
         cap++;
     }
     print();
+    
     return 0;
 }
 
